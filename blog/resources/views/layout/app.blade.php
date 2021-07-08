@@ -7,8 +7,21 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    
+    <header class="header">
 
+    </header>
+    <!-- /.header -->
 
+    <main class="main">
+        @yield('content')
+    </main>
+    <!-- /.main -->
+
+    <footer class="footer">
+
+    </footer>
+    <!-- /.footer -->
 
 </body>
 </html>
