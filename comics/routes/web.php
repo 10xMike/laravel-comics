@@ -11,38 +11,43 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/characters', function(){
+Route::get('/characters', function () {
     return 'characters page';
 });
-Route::get('/comics', function(){
+
+/* Comics Route */
+Route::get('/comics', function () {
+    $comics = config('comics.data');
+    /* ddd($comics); */
     return 'comics page';
 });
-Route::get('/movies', function(){
+
+Route::get('/movies', function () {
     return 'movies page';
 });
-Route::get('/tv', function(){
+Route::get('/tv', function () {
     return 'tv page';
 });
-Route::get('/games', function(){
+Route::get('/games', function () {
     return 'games page';
 });
-Route::get('/collectibles', function(){
+Route::get('/collectibles', function () {
     return 'collectibles page';
 });
-Route::get('/videos', function(){
+Route::get('/videos', function () {
     return 'videos page';
 });
-Route::get('/fans', function(){
+Route::get('/fans', function () {
     return 'fans page';
 });
-Route::get('/news', function(){
+Route::get('/news', function () {
     return 'news page';
 });
-Route::get('/shop', function(){
+Route::get('/shop', function () {
     return 'shop page';
 });
