@@ -68,3 +68,4 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
     return 'shop page';
 })->name('shop');
+
