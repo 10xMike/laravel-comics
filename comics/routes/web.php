@@ -24,7 +24,7 @@ Route::get('/characters', function () {
 Route::get('/comics', function () {
     $comics = config('comics.data');
     /* ddd($comics); */
-    return view('comics');
+    return view('comics', compact('comics'));
 });
 
 Route::get('/movies', function () {
