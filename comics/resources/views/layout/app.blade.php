@@ -14,9 +14,9 @@
 
     </head>
     <body>
-        <header id="site_header">
+
         @include('partials.header')
-        </header>
+
         <!-- /#site_header -->
 
         <main id="site_main">
@@ -24,9 +24,9 @@
         </main>
         <!-- /#site_main -->
 
-        <footer id="site_footer">
+
         @include('partials.footer')
-        </footer>
+
         <!-- /#site_footer -->
     </body>
 </html>
