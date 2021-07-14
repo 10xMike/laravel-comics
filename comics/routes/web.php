@@ -29,6 +29,11 @@ Route::get('/comics', function () {
     return view('comics', compact('comics'));
 })->name('comics');
 
+Route::get('comics/{id}', function($id){
+    $comics = config('comics.data');
+    return view('comics.index', compact('comics'));
+})->name('comics');
+
 /* Movies Route */
 Route::get('/movies', function () {
     return 'movies page';
