@@ -1,53 +1,3 @@
-<?php
-$menu = [
-    [
-        'href' => route('home'),
-        'text' => 'Home',
-    ],
-    [
-        'href' => route('characters'),
-        'text' => 'Characters',
-    ],
-    [
-        'href' => route('comics'),
-        'text' => 'Comics',
-    ],
-    [
-        'href' => route('movies'),
-        'text' => 'Movies',
-    ],
-    [
-        'href' => route('tv'),
-        'text' => 'TV',
-    ],
-    [
-        'href' => route('games'),
-        'text' => 'Games',
-    ],
-    [
-        'href' => route('collectibles'),
-        'text' => 'Collectibles',
-    ],
-    [
-        'href' => route('videos'),
-        'text' => 'Videos',
-    ],
-    [
-        'href' => route('fans'),
-        'text' => 'Fans',
-    ],
-    [
-        'href' => route('news'),
-        'text' => 'News',
-    ],
-    [
-        'href' => route('shop'),
-        'text' => 'Shop',
-    ],
-]
-
-?>
-
 <header id="site_header">
     <div class="topnav">
         DC POWER ADDITIONAL SITES
@@ -55,12 +5,27 @@ $menu = [
     <div class="main_menu">
         Main Menu
     </div>
-    <nav>
+<!--     <nav>
         <ul>
-            @foreach($menu as $item)
-            <li><a href="{{$item['href']}}">{{$item['text']}}</a></li>
+            @foreach(config('comics.menu') as $item)
+            <li><a href="{{ route($item['href']) }}" class="{{ Route::currentRouteName() === $item['href'] ? 'active' : '' }}"> {{ $item['text']}} </a></li>
             @endforeach
         </ul>
+    </nav> -->
+    <div class="menu_wrapper">
+    <nav class="container">
+      <a href="{{route('home')}}">
+        <img class="logo" src="{{asset('img/dc-logo.png')}}" alt="DC logo">
+      </a>
+      <ul class="main_menu list-inline">
+        @foreach(config('comics.menu') as $item)
+        <li>
+          <a href="{{ route($item['href']) }}" class="{{ Route::currentRouteName() === $item['href'] ? 'active' : '' }}"> {{ $item['text']}} </a>
+        </li>
+        @endforeach
+
+      </ul>
     </nav>
+  </div>
 
 </header>

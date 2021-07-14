@@ -214,4 +214,51 @@ return [
             ],
         ],
     ],
+    
+    'menu' => [
+        [
+            'href' => 'home',
+            'text' => 'Home',
+        ],
+        [
+            'href' => 'characters',
+            'text' => 'Characters',
+        ],
+        [
+            'href' => 'comics',
+            'text' => 'Comics',
+        ],
+        [
+            'href' => 'movies',
+            'text' => 'Movies',
+        ],
+        [
+            'href' => 'tv',
+            'text' => 'TV',
+        ],
+        [
+            'href' => 'games',
+            'text' => 'Games',
+        ],
+        [
+            'href' => 'collectibles',
+            'text' => 'Collectibles',
+        ],
+        [
+            'href' => 'videos',
+            'text' => 'Videos',
+        ],
+        [
+            'href' => 'fans',
+            'text' => 'Fans',
+        ],
+        [
+            'href' => 'news',
+            'text' => 'News',
+        ],
+        [
+            'href' => 'shop',
+            'text' => 'Shop',
+        ],
+    ]
 ];
